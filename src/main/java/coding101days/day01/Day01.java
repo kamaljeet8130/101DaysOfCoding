@@ -1,4 +1,4 @@
-package coding101days;
+package coding101days.day01;
 /**
  * Day 01 — Binary Search
  * LeetCode #704
