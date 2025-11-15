@@ -16,7 +16,6 @@ public class Day07ReverseInteger {
         int n = 1534236469;
         System.out.println("Reversed: " + reverse(n));
     }
-
     /**
      * Reverses a 32-bit signed integer.
      * Uses long for intermediate calculations to detect overflow.
@@ -32,7 +31,6 @@ public class Day07ReverseInteger {
             reversed = reversed * 10 + digit;
             x /= 10;
         }
-
         // Check 32-bit signed integer overflow
         if (reversed > Integer.MAX_VALUE || reversed < Integer.MIN_VALUE) {
             return 0;
