@@ -5,12 +5,7 @@ import java.util.List;
 
 public class Day26ReverseAStringII {
     public static void main(String[] args) {
-        ArrayList<Character> list = new ArrayList<>();
-        list.add('h');
-        list.add('e');
-        list.add('l');
-        list.add('l');
-        list.add('0');
+        List<Character> list = List.of('h', 'e', 'l', 'l', 'o');
         reverseString(list);
     }
 
