@@ -1,44 +1,52 @@
 package coding101days.day38;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.TreeSet;
 
+/**
+ * Day 38 — Remove Duplicates from Sorted Array
+ * LeetCode #26
+ *
+ * Time Complexity:
+ *  - Brute Force: O(n log n)
+ *  - Optimal: O(n)
+ *
+ * Space Complexity:
+ *  - Brute Force: O(n)
+ *  - Optimal: O(1)
+ */
 public class Day38RemoveDuplicatesFromSortedArray {
+
     public static void main(String[] args) {
         int[] arr = {0, 0, 3, 3, 5, 6};
-//        System.out.println(removeDuplicatesByUsingBruteForce(arr));
-        System.out.println(removeDuplicateByUsingOptimalSolution(arr));
 
+        System.out.println(removeDuplicatesOptimal(arr));
     }
-    public static int removeDuplicatesByUsingBruteForce(int[] arr){
+
+    // Brute force using TreeSet
+    public static int removeDuplicatesBruteForce(int[] arr) {
         TreeSet<Integer> set = new TreeSet<>();
-        for (int i : arr){
-            set.add(i);
+
+        for (int num : arr) {
+            set.add(num);
         }
-        int count = 0;
-        for(int i : set){
-            arr[count++] = i;
+
+        int index = 0;
+        for (int num : set) {
+            arr[index++] = num;
         }
-        for(int i : arr){
-            System.out.print(i + " ,");
-        }
-        System.out.println();
-        return count;
+
+        return index;
     }
-    public static int removeDuplicateByUsingOptimalSolution(int[] arr){
-        //two pointer approach!!
+
+    // Optimal two-pointer approach
+    public static int removeDuplicatesOptimal(int[] arr) {
         int i = 0;
-        for(int j = 1;j<arr.length;j++){
-            if(arr[i]!=arr[j]){
+
+        for (int j = 1; j < arr.length; j++) {
+            if (arr[i] != arr[j]) {
                 arr[++i] = arr[j];
             }
         }
-        for (int j : arr){
-            System.out.print(j+" , ");
-        }
-        System.out.println();
-        return i;
+        return i + 1; // length of unique elements
     }
 }
-
