@@ -21,7 +21,7 @@ public class Day49isPalindrome {
         }
 
         // Recursive call
-        return check(s, left + 1, right - 1);
+        return check( s, left + 1, right - 1);
     }
 
 }
