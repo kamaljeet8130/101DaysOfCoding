@@ -17,6 +17,6 @@ public class Day51PrintAllSubsequences {
         printSubsequence(s, index + 1, current + s.charAt(index));
 
         // Choice 2: exclude current character
-        printSubsequence(s, index + 1, current);
+        printSubsequence( s, index + 1, current);
     }
 }
