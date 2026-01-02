@@ -1,0 +1,22 @@
+Hashing theory is about using hash functions to map data to fixed-size values (hash codes) for efficient storage and retrieval in data structures
+like hash tables, aiming for near O(1) average time for search, insert, and delete operations, contrasting with slower O(n) methods, though managing collisions
+(different inputs yielding same output) is crucial. It balances space and time, creating a "digital fingerprint" for data, used in databases, security,
+and compilers for fast lookups.
+
+Core Concepts
+Hash Function: A deterministic algorithm that converts input data (keys) into a fixed-size hash value (index).
+Hash Table: An array or table where data is stored, with the hash value determining the index (bucket).
+Key-Value Pairs: Data is stored as key-value pairs, with the key used for hashing.
+Efficiency:
+Aims for O(1) average time complexity for operations, significantly faster than O(n) (linear search) or O(log n) (binary search).
+Key Properties & Challenges
+Deterministic: Same input always yields the same hash.
+One-Way (Security): In cryptography, impossible to reverse the hash to get the original data (e.g., passwords).
+Collision: When two different keys produce the same hash/index; must be handled (e.g., chaining, open addressing).
+Distribution: Good hash functions spread keys uniformly to minimize collisions.
+Applications
+Databases & Dictionaries: Fast data indexing and retrieval.
+Caching: Quickly checking if data is already stored.
+Security: Password storage (hashed), data integrity checks (e.g., file downloads).
+Compilers: Implementing symbol tables.
+This video explains how hash tables handle collisions:
